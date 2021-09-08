@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'avia_ticket' %}" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+<h2>{{error}}</h2><br>
+<h2>{{name}}</h2><br>
+<h2>{{from_him}}</h2><br>
+<h2>{{where_him}}</h2><br>
+<h2>Стоимость:  {{what}}</h2><br>
+<h2>{{ date }}</h2><br>
+</body>
+</html>
